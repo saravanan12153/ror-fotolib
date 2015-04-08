@@ -5,7 +5,7 @@
     <% end %>
 
     <div class="caption">
-      <h3><%= pic.title %></h3>
+      <h3><%= pic.title %><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, pic_path(pic), method: :delete, class: 'pull-right', data: { confirm: "Are you sure?" } %></h3>
       <p><%= pic.details %></p>
       <p><%= link_to 'Edit', edit_pic_path(pic), class: 'btn btn-primary' %> <%= link_to 'Show', pic_path(pic), class: 'btn btn-default' %></p>
     </div>

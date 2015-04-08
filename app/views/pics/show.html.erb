@@ -8,7 +8,7 @@
           <div class="col-md-12">
             <div class="panel panel-info">
               <div class="panel-heading">
-                <h3 class="panel-title"><%= @pic.title %></h3>
+                <h3 class="panel-title"><%= @pic.title %><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, pic_path(@pic), method: :delete, class: 'pull-right', data: { confirm: "Are you sure?" } %></h3>
               </div>
               <div class="panel-body">
                 <div class="row">

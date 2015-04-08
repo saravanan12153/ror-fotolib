@@ -5,17 +5,13 @@
 
       <div class="container">
 
-        <h1 class="text-center">Pics</h1>
-
+        <h1 class="text-center">Pics <%= link_to '<i class="fa fa-camera"></i> New Picture'.html_safe, new_pic_path, class: 'btn btn-primary btn-lg' %> </h1>
+        <p class="text-center">(Total Size used: <%= '%.1f'%@total_size %> MBs)</p>
         <div class="row">
 
           <%= render @pics %>
 
         </div>
-
-        <br>
-
-        <%= link_to 'New Pic', new_pic_path %>
       </div>
   <% end %>
 </section>

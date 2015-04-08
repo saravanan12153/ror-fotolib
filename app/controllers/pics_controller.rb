@@ -6,6 +6,11 @@ class PicsController < ApplicationController
     # GET /pics.json
     def index
         @pics = current_user.pics
+        @total_size = 0
+        @pics.each do |pic|
+            @total_size+=pic.image_file_size
+        end
+        @total_size /= 1000000.0
     end
 
     # GET /pics/1
