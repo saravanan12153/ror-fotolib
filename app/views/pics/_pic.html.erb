@@ -1,0 +1,13 @@
+<div class="col-md-3">
+  <div class="thumbnail">
+    <%= link_to pic_path(pic) do %>
+        <%= image_tag "def.jpg", class: "img-responsive" %>
+    <% end %>
+
+    <div class="caption">
+      <h3><%= pic.title %></h3>
+      <p><%= pic.details %></p>
+      <p><%= link_to 'Edit', edit_pic_path(pic), class: 'btn btn-primary' %> <%= link_to 'Show', pic_path(pic), class: 'btn btn-default' %></p>
+    </div>
+  </div>
+</div>

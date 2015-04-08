@@ -1,0 +1,21 @@
+<% content_for :title, 'All Pics | ' %>
+
+<section>
+  <% content_for :section do %>
+
+      <div class="container">
+
+        <h1 class="text-center">Pics</h1>
+
+        <div class="row">
+
+          <%= render @pics %>
+
+        </div>
+
+        <br>
+
+        <%= link_to 'New Pic', new_pic_path %>
+      </div>
+  <% end %>
+</section>

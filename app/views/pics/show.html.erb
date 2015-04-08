@@ -1,0 +1,31 @@
+<% content_for :title, @pic.title+' | ' %>
+
+<section>
+  <% content_for :section do %>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title"><%= @pic.title %></h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <%= link_to asset_path('def.jpg') do %>
+                        <%= image_tag 'def.jpg', class: 'img-responsive' %>
+                    <% end %>
+                  </div>
+                  <div class="col-md-4">
+                    <%= @pic.details %><br>
+                    <%= link_to 'Edit', edit_pic_path(@pic), class: 'btn btn-primary btn-lg btn-block' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+</section>
