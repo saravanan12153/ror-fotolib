@@ -11,6 +11,7 @@ class PicsController < ApplicationController
     # GET /pics/1
     # GET /pics/1.json
     def show
+        authorize! :read, @pic
     end
 
     # GET /pics/new
@@ -20,6 +21,7 @@ class PicsController < ApplicationController
 
     # GET /pics/1/edit
     def edit
+        authorize! :update, @pic
     end
 
     # POST /pics
@@ -41,6 +43,7 @@ class PicsController < ApplicationController
     # PATCH/PUT /pics/1
     # PATCH/PUT /pics/1.json
     def update
+        authorize! :update, @pic
         respond_to do |format|
             if @pic.update(pic_params)
                 format.html { redirect_to @pic, notice: 'Pic was successfully updated.' }
@@ -55,6 +58,7 @@ class PicsController < ApplicationController
     # DELETE /pics/1
     # DELETE /pics/1.json
     def destroy
+        authorize! :destroy, @pic
         @pic.destroy
         respond_to do |format|
             format.html { redirect_to pics_url, notice: 'Pic was successfully destroyed.' }
