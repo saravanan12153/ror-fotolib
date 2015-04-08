@@ -1,0 +1,20 @@
+<% content_for :title, 'Home | ' %>
+
+<section>
+  <% content_for :section do %>
+    <div class="jumbotron">
+    	<div class="container">
+    		<h1><i class="fa fa-camera"></i> FotoLib</h1>
+    		<p>Private photo saving and managing app.</p>
+    		<p>
+                <%= link_to '<i class="fa fa-sign-in"></i> Sign Up'.html_safe, new_user_registration_path, class:'btn btn-primary btn-lg' %>
+    		</p>
+    	</div>
+    </div>
+  <% end %>
+</section>
+
+<script>
+    <% content_for :scripts do %>
+    <% end %>
+</script>

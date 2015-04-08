@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fotolib</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= yield :title %>FotoLib</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <%= render 'layouts/header' %>
+</header>
 
-<%= yield %>
+<section>
+  <%= yield :section %>
+</section>
 
+<footer>
+  <%= render 'layouts/footer' %>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        <%= yield :scripts %>
+    });
+</script>
 </body>
 </html>
