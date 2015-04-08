@@ -13,8 +13,8 @@
               <div class="panel-body">
                 <div class="row">
                   <div class="col-md-8">
-                    <%= link_to asset_path('def.jpg') do %>
-                        <%= image_tag 'def.jpg', class: 'img-responsive' %>
+                    <%= link_to @pic.image.url(:original) do %>
+                        <%= image_tag @pic.image.url(:original), class: 'img-responsive' %>
                     <% end %>
                   </div>
                   <div class="col-md-4">
