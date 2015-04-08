@@ -20,6 +20,14 @@
                   <div class="col-md-4">
                     <%= @pic.details %><br>
                     <%= link_to 'Edit', edit_pic_path(@pic), class: 'btn btn-primary btn-lg btn-block' %>
+                    <div class="text-center">
+                      <%= link_to 'https://www.facebook.com/sharer/sharer.php?u='+@pic.image.url(:original), target: '_blank' do %>
+                          <i class="fa fa-facebook-square fa-4x"></i>
+                      <% end %>
+                      <%= link_to 'https://twitter.com/home?status=Check%20this%20pic%3A%20'+@pic.image.url(:original), target: '_blank' do %>
+                          <i class="fa fa-twitter-square fa-4x"></i>
+                      <% end %>
+                    </div>
                   </div>
                 </div>
               </div>
