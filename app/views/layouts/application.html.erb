@@ -13,12 +13,20 @@
 <header>
   <%= render 'layouts/header' %>
 </header>
-<% flash.each do |type, message| %>
-    <div class="alert alert-info fade-in">
-      <button class="close" data-dismiss="alert">&times;</button>
-      <%= message %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <% flash.each do |type, message| %>
+          <div class="alert alert-info fade-in">
+            <button class="close" data-dismiss="alert">&times;</button>
+            <%= message %>
+          </div>
+      <% end %>
     </div>
-<% end %>
+    <div class="col-md-3"></div>
+  </div>
+</div>
 <section>
   <%= yield :section %>
 </section>

@@ -3,11 +3,18 @@
 <section>
   <% content_for :section do %>
 
-      <div class="container"><h1>New Pic</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <h1 class="text-center">Add New Image</h1>
 
-        <%= render 'form' %>
+            <%= render 'form' %>
 
-        <%= link_to 'Back', pics_path %>
+            <%= link_to 'Back', pics_path %>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
       </div>
   <% end %>
 </section>

@@ -1,12 +1,12 @@
-<% content_for :title, 'All Pics | ' %>
+<% content_for :title, 'Pictures | ' %>
 
 <section>
   <% content_for :section do %>
 
       <div class="container">
 
-        <h1 class="text-center">Pics <%= link_to '<i class="fa fa-camera"></i> New Picture'.html_safe, new_pic_path, class: 'btn btn-primary btn-lg' %> </h1>
-        <p class="text-center">(Total Size used: <%= '%.1f'%@total_size %> MBs)</p>
+        <h1 class="text-center">Pictures <%= link_to '<i class="fa fa-camera"></i> New Picture'.html_safe, new_pic_path, class: 'btn btn-primary btn-lg' %> </h1>
+        <p class="text-center">(Total Size Used: <%= '%.1f'%@total_size %> MBs, Total Pictures: <%= @total_count %>)</p>
         <div class="row">
 
           <%= render @pics %>

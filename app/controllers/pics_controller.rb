@@ -11,6 +11,7 @@ class PicsController < ApplicationController
             @total_size+=pic.image_file_size
         end
         @total_size /= 1000000.0
+        @total_count = @pics.count
     end
 
     # GET /pics/1
